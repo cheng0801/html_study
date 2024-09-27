@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DOM</title>
+	<script type="text/javascript" src="./statics/js/dom.js"></script>
+	<style type="text/css">
+	img
+	{
+		float:right;
+		width:400px; 
+		height:400px;
+	}
+
+	div
+	 {
+	    background-color: coral;
+	    border: 1px solid;
+	    padding: 50px;
+	}
+	</style>
+	
+</head>
+<body onload = "checkCookies()">
+	<p id="intro">你好世界</p>
+	<p>该实例展示了 <b>getElementById</b> 方法</p>
+	<button type="button" onclick="my1()">点击1</button>
+
+	<p>你好世界！</p>
+	<div id="main">
+		<p>DOM 是非常有用。</p>
+		<p>该实例展示了 <b> getElementsByTagName</b> 方法</p>
+		<button type="button" onclick="my2()">点击2</button>
+	</div>
+
+	<p class="intro">你好世界</p>
+	<p>该实例展示了 <b>getElementsByClassName</b> 方法</p>
+	<button type="button" onclick="my3()">点击3</button>
+	<p id="demo99"></p>
+
+	<p id="p1">HELLO WORLD</p>
+	<button type="button" onclick="my4()">点击4</button>
+	
+	
+	<h1 id="demo5">旧标题</h1>
+	<button type="button" onclick="my5()">点击5</button>
+
+	<br>
+	<img id="demo6" src="./statics/images/falali1.jpg" >
+	<button type="button" onclick="my6()">点击6</button>
+	
+	<br>
+	<p id="p1">Hello World</p>
+	<p id="p2">Hello World</p>
+	<button type="button" onclick="my7()">点击7</button>
+
+	<h1 id="id1">我的标题1</h1>
+	<button type="button" onclick="document.getElementById('id1')
+	.style.color = 'red'">点击</button>
+
+	<h1 onclick="this.innerHTML = 'Ooops!'">点击文本</h1>
+	<h1 onclick="changetext(this)">点击文本</h1>
+
+	<p>点击按钮执行 <em>displayDate()</em> 函数.</p>
+	<button id="myBtn" onclick="displayDate()">点这里</button>
+	<p id="demo"></p>
+
+	<p>弹窗-提示浏览器cookie是否可用。</p>
+
+	输入你的名字: <input type="text" id="fname" onchange="my8Function()">
+	<p>当你离开输入框后，函数将被触发，将小写字母转为大写字母。</p>
+
+	<div onmouseover="mOver(this)" onmouseout="mOut(this)"style="background-color:#D94A38;width:120px;height:20px;padding:40px;">Mouse Over Me></div>
+	<br>
+	<div onmousedown = "mDown(this)" onmouseup="mUp(this)" style="background-color: #D94A38;
+	width: 90px; height: 20px; padding: 40px; float: right;">Click </div>
+	<br>
+
+	<p>该实例使用 addEventlistener() 方法在按钮中添加点事件。</p>
+	<button type="button" onclick="displayDate()">点击</button>
+	<p id="demo9"></p>
+	<br>
+
+	<p>该实例使用 addEventListener() 方法向同个按钮中添加两个点击事件。</p>
+	<button type="button" onclick="my10()" >点击10</button>
+	<p id="demo10"></p>
+
+	<p>实例演示了在使用 addEventListener() 方法时如何传递参数。</p>
+	<p>点击按钮执行计算。</p>
+	<button type="button" onclick="my11()">点我</button>
+	<p id="demo11"></p>
+
+	<p>实例演示了在添加不同事件监听时，冒泡与捕获的不同。</p>
+	<div id="myDiv">
+		<p id="myP">点击段落，我是冒泡。</p>
+	</div>
+	<br>
+	<div id="myDiv2">
+		<p id="myP2">点击段落，我是捕获。 </p>
+	</div>
+</body>
+</html>
