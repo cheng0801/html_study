@@ -149,3 +149,25 @@ function my13()
 	document.write(mycars[i] + "<br>");
 	}
 }
+
+Array.prototype.myUcase=function()
+{
+	for (i=0;i<this.length;i++)
+	{
+		this[i]=this[i].toUpperCase();
+	}
+}
+function myFunction()
+{
+	var fruits = ["Banana", "Orange", "Apple", "Mango"];
+	fruits.myUcase();
+	var x=document.getElementById("demo14");
+	x.innerHTML=fruits;
+}
+
+function my15()
+{
+	var fruits = ["Banana","Orange","Apple","Mango"];
+	var x = document.getElementById("demo15");
+	x.innerHTML = fruits.join();
+}
