@@ -1,0 +1,31 @@
+{
+    "book": [
+        {
+            "id":"01",
+            "language": "Java",
+            "edition": "third",
+            "author": "Herbert Schildt"
+        },
+        {
+            "id":"07",
+            "language": "C++",
+            "edition": "second",
+            "author": "E.Balagurusamy"
+    }]
+}
+
+<note>
+<to>George</to>
+<from>John</from>
+<heading>Reminder</heading>
+<body>Don't forget the meeting!</body>
+</note>
+
+<books>
+    <book>
+        <id>01</id>
+        <language>Java</language>
+        <edition>third</edition>
+        <author>Herbert Schildt</author>
+    </book>
+</books>

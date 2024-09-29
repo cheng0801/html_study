@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Title</title>
+</head>
+<body>
+
+<script type="text/javascript">
+   var json = {"name": "小明", "age": 12};
+   console.log(json);
+   var str = JSON.stringify(json);
+   console.log(str);
+   json.sex = '女';
+   var id = 'id';
+   json[id] = '123';
+   console.log(json)
+   console.log(json.hasOwnProperty(id))
+   delete json.id;
+   console.log(json);
+   id = 'id';
+   json[id] = '123';
+   console.log(json);
+   delete json[id];
+   console.log(json);
+   var array = [{"name": "小李", "age": 20}];
+   console.log(array);
+   array.push(json);
+   console.log(array);
+   for (var item in array) {
+       console.log(array[item].name)
+   }
+   array.splice(1)
+   console.log(array)
+</script>
+</body>
+</html>
