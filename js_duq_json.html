@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transtional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transtional.dtd">
+<html xmlns = "http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv = "Content-type" content = "text/html"; charset="utf-8"/>
+	<title>11getJSON获取数据</title>
+	<script type="text/javascript" src = "./statics/js/jquery-3.7.1.min.js"></script>
+	<script type="text/javascript" src = "#"></script>
+
+	<style type="text/css">
+		#divframe
+		{
+			bdoder: 1px; 
+			solid: #999; 
+			width: 500px;
+			marign: 0 auto;
+		}
+		.loadTitle
+		{
+			background: #CCC;
+			height: 30px;
+		} 
+	</style>
+	<script type="text/javascript">
+		$(function()
+		{
+			$("#btn").click(function ()
+			{
+				$.getJSON("#",function (data)
+
+				{
+					var data= {
+  "status": 0,
+  "msg": "asd",
+  "data": {
+    "yellow": [],
+    "pink": [],
+    "blue": [],
+    "green": [],
+    "lightyellow": [],
+    "white": [
+      {
+        "id": 28,
+        "name": "秩序魔兽██微变新开",
+        "game_version": "巫妖王之怒",
+        "open_time": "2022-12-09 13:55:33",
+        "net_line": 0,
+        "describe": "急速单刷-人山人海-长久稳定-特色玩法-打金首选",
+        "link": "http://www.5520wow.com/",
+        "mark": 0,
+        "old_mark": 1,
+        "start_time": "2022-12-10 18:06:27",
+        "end_time": "2022-12-30 14:23:33",
+        "total_times": 4,
+        "enable": 1,
+        "change_time": "2024-09-30 15:00:25",
+        "link_name": "微变单刷",
+        "ask_me": "59595111",
+        "star_order": 0
+      }
+    ]
+  }
+}
+					console.log(data);
+
+					for(var key in data){
+						if(data.hasOwnProperty(key)){
+							var x = key + " : " + data[key] + "<br>";
+							document.getElementById("demo5").innerHTML += x ;
+						}
+						if(key == "data"){
+							// alert(data[key]);
+							for(var k in data[key]){
+								// alert("2222222222");
+								if(data[key].hasOwnProperty(k)){
+									// alert("33333333333");
+									// alert(k);
+									var s = k + " : " + data[key][k] + "<br>";
+									document.getElementById("demo5").innerHTML += s ;
+
+									}
+								if(k == "white"){
+									// alert("444444444444");
+									// alert(data[key][k][0]);
+									for(var k1 in data[key][k][0]){
+										if (data[key][k][0].hasOwnProperty(k1)){
+											alert(k1);
+											var q = k1 + " : " + data[key][k][k1] + "<br>"
+											document.getElementById("demo5").innerHTML += q ;
+										}
+									}
+								}
+							}
+						}
+					}
+					// for (var item in data){
+					// 	alert(data.item);
+					// 	x = item + " : " + data["item"] + "<br>";
+					// 	document.getElementById("demo5").innerHTML += x ;
+					// }
+					
+					// var str = JSON.stringify(data)
+					var x = "";
+					 
+					for (var i = 0; i < str.length; i++)  {
+						x = str[i] + "<br>";
+						document.getElementById("demo5").innerHTML += x ; 
+					}
+					
+ 
+					// for (var item in str){
+					// 	document.getElementById("demo5").innerHTML += x + "<br>";	
+					// }
+
+					// var $jsontip = $("#jsonTip");
+					// var strHtml = "123";
+					// //存储数据的变量
+					
+					// //清空内容
+					// $.each (date, function (infoIndex, info)
+					// {
+					// 	strHtml += "status: " + info[""] + "<br>";
+						
+					// })
+					// $jsontip.html (strHtml);
+					// 显示处理后的数据
+				})
+			})
+		})
+	</script>
+</head>
+<body>
+	<div id="divframe">
+		<div class="loadTile">
+			<input type="button" value="数据获取" id="btn" />
+		</div>
+		<div id="demo5"></div>
+	</div>
+
+</body>
+</html>

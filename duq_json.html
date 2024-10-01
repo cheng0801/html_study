@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>读取json</title>
+	<style type="text/css">
+		#divframe
+		{
+			bdoder: 1px; 
+			solid: #999; 
+			width: 500px;
+			marign: 0 auto;
+		}
+		.loadTitle
+		{
+			background: #CCC;
+			height: 30px;
+		} 
+	</style>
+	<script type="text/javascript" src="./statics/js/duq_json.js"></script>
+</head>
+<body>
+	<div id="divframe">
+		<div class="loadTile">
+			<input type="button" value="数据获取" onclick="myFunction()" />
+		</div>
+		<div id="demo5"></div>
+		<div id="demo2"></div>
+	</div>
+</body>
+</html>
+ function myFunction(){
+     var a =  {
+        "status": 0,
+        "msg": "asd",
+        "data": {
+            "yellow": [],
+            "pink": [],
+            "blue": [],
+            "green": [],
+            "lightyellow": [],
+            "white": [
+                {
+                "id": 28,
+                "name": "秩序魔兽██微变新开",
+                "game_version": "巫妖王之怒",
+                "open_time": "2022-12-09 13:55:33",
+                "net_line": 0,
+                "describe": "急速单刷-人山人海-长久稳定-特色玩法-打金首选",
+                "link": "http://www.5520wow.com/",
+                "mark": 0,
+                "old_mark": 1,
+                "start_time": "2022-12-10 18:06:27",
+                "end_time": "2022-12-30 14:23:33",
+                "total_times": 4,
+                "enable": 1,
+                "change_time": "2024-09-30 15:00:25",
+                "link_name": "微变单刷",
+                "ask_me": "59595111",
+                "star_order": 0
+                }]
+            }
+    };
+    Object.keys(a).forEach(function(key){ 
+        // alert("11111111")
+        var value = key + " : " + a[key] + "<br>";
+        // 在这里可以对value进行处理
+        document.getElementById("demo5").innerHTML += value;
+             if (key == "data"){
+                // alert("222222222");
+                // alert(key);
+                var b = a[key]
+                Object.keys(b).forEach(function(key) {
+                    // alert("3333333");
+                        if (a[key].hasOwnProperty(key)){
+                    alert(data[key])
+                    
+                        alert("44444");
+                        var value1 =  data[key] + " : " + data[key][key] + "<br>";
+                    // 在这里可以对value进行处理
+                    document.getElementById("demo5").innerHTML += value1;
+                    }
+                    
+                })
+            }
+    });
+           
+            //     Object.keys(data).forEach(function(key) {
+            //         
+            //         var a = key1 + " : " + data[key][key1] + "<br>";
+            //         document.getElementById("demo5").innerHTML += value; 
+            // }
+        
+}
+
