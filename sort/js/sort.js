@@ -161,3 +161,16 @@ function ksSort() {
 		arr.quickSort();
 		document.getElementById("demo5").innerHTML = arr;
 	}
+function f1(){
+  let a=1
+  function f2(){
+    let a=2
+    function f3(){
+      console.log(a)
+    }
+    a=21
+    f3()
+  }
+  f2()
+}
+f1()
