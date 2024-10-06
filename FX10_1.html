@@ -656,6 +656,136 @@ continue;
         document.write("<br>" + b);
     }
 
+//     var name = "The Window";
+
+//     var object = {
+// 　　　　name : "My Object",
+
+// 　　　　getNameFunc : function(){
+// 　　　　　　return function(){
+// 　　　　　　　　return this.name;
+// 　　　　　　};
+
+// 　　　　}
+
+// 　　};
+
+// 　　alert(object.getNameFunc()());
+
+// 　var name = "The Window";
+
+// 　　var object = {
+// 　　　　name : "My Object",
+
+// 　　　　getNameFunc : function(){
+// 　　　　　　var that = this;
+// 　　　　　　return function(){
+// 　　　　　　　　return that.name;
+// 　　　　　　};
+
+// 　　　　}
+
+// 　　};
+
+// 　　alert(object.getNameFunc()()); 
+
+
+//对象是一组“键值对（key-value）”的集合，是一种无序的复合数据集合
+
+    if (h != 2 ) {
+        document.write("<br>" + "-------------");
+    }
+
+var add = (function () {
+    
+        var user = {
+            name: "cheng",
+            age : "20",
+            flag:true,
+            Name:function () {
+                //document.write("红");
+                return("红");
+            },
+            Array:["html","css","javascript",{
+                name: "cheng1",
+                age : "20",
+                flag:true,
+                Name:function () {
+                    //document.write("红");
+                    return("红");
+            },
+            Array1:["html","css","javascript",]
+            }]
+        };
+        return function () {
+            return document.write("<br>" + user.name + //cheng
+                "<br>" + user.Name() + //红
+                "<br>" +user.Array[1] +//css 
+               "<br>" + user.Array[3].name +//cheng1 
+               "<br>" + user.Array[3].Array1[0] );//html
+        };
+}) ();
+
+add();
+
+
+if (h != 2 ) {
+        document.write("<br>" + "-------------");
+    }
+
+//Date对象是JavaScript原生的时间库，以1970年1月1日作为时间的零点
+//Date.now()返回当前时间距离时间零点的毫秒数，相当于Unix时间戳乘以1000
+    document.write("<br>" + Date.now());//1728133485131  时间戳
+     document.write("<br>" + Date());//Sat Oct 05 2024 21:04:45 GMT+0800 (中国标准时间)
+      document.write("<br>" + new Date(1728133485131).getDate());//5返回实列对象对应每个月几号
+      document.write("<br>" + new Date(1728133485131).getDay());//返回星期几星期日为 0
+      document.write("<br>" + new Date(1728133485131).getYear());//返回距离1900的年数
+      document.write("<br>" + new Date(1728133485131).getFullYear());//返回四位的年数
+      document.write("<br>" + new Date(1728133485131).getMonth());//返回月份从0 开始
+      document.write("<br>" + new Date(1728133485131).getHours());//返回小时从0 开始
+      document.write("<br>" + new Date(1728133485131).getMilliseconds());//返回毫秒
+      document.write("<br>" + new Date(1728133485131).getMinutes());//返回分钟
+      document.write("<br>" + new Date(1728133485131).getSeconds());//返回秒
+
+
+      if (h != 2 ) {
+        document.write("<br>" + "-------------");
+    }
+
+    // document.getElementsByTagName('')[] 搜索HTML标签，传入*就可以返回文档中所有HML元素
+    // document.getElementByClassName('')[] 返回一个类似数组的对象，包括所有class名字符合指定的条件
+    // document.getElementByName('')  document.getElementById('')
+    // document.querySelector('.myclass') 接受一个css选择器作为参数，
+    // 返回该选择器的元素节点。有多个返回的一个没有返回null
+    // document.querySelecorAll('.myclass')返回一个NodeList对象，包含所有给定选择器的节点
+
+
+    if (h != 2 ) {
+            document.write("<br>" + "-------------");
+        }
+console.log("0000000000000")
+
+var p = document.createElement('p');//用于生成节点，并返回节点
+console.log(p);
+var newContent = document.createTextNode('Hello');//生成文本节点，并返回该节点。他的参数是文本内容
+console.log(newContent);
+var aa = p.appendChild(newContent);//appendChild 将元素和内容放到容器中
+console.log(aa);
+
+
+// document.createAttribute() 生成一个新的属性节点并返回
+
+var a = document.createAttribute("id");
+a.value = "asdfg"; //给id赋值
+console.log(a); 
+var content = document.createTextNode("我是文本") 
+var text = document.createElement("p");
+text.appendChild(content);
+text.setAttributeNode(a);
+
+console.log(text);
+document.write();
+
 
 </script>
 

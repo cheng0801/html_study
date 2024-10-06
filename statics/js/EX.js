@@ -93,7 +93,7 @@ function my7()
 		x = "你按下了\"取消\"按钮";
 	}
 	var b;
-	var person=prompt("请输入你的名字","Harry Potter");
+	var person =prompt("请输入你的名字","Harry Potter");
 	if (person!=null && person!=""){
 	    b="你好 " + person + "！今天感觉如何？";
 	    document.getElementById("demo").innerHTML=b;

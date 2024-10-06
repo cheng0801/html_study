@@ -87,7 +87,8 @@ function myFunction(text){
 		var dropZone = document.getElementById('drop_zone');
 		dropZone.addEventListener('dragover', handleDragOver,false);
 		dropZone.addEventListener('drop', handleFileSelect, false)
-
-	
-
 </script>
+// 读取文件
+// 获得文件后，使用FileReader对象读取文件到内存。读取完成后，将触发onload事件，result属性用于访问文件的数据，
+// FileReader包括四个异步读取文件的选项.
+1.

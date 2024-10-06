@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>FX10.1</title>
+	<style>
+		.box{
+			height: 200px;
+			width: 200px;
+			boder: 5px solid red;
+			padding: 10px;
+			margin: 20px;
+			background: green;
+			float: right;
+
+		}
+
+		.box1{
+			height: 200px;
+			width: 200px;
+			boder: 5px solid red;
+			padding: 10px;
+			margin: 20px;
+			background: lightsalmon;
+			text-align: center;
+			
+		}
+
+		.box2{
+			height: 200px;
+			width: 200px;
+			boder: 5px solid red;
+			padding: 10px;
+			margin: 20px;
+			background: yellow;
+			text-align: center;
+			
+		}
+
+		.box3{
+			height: 200px;
+			width: 200px;
+			boder: 5px solid red;
+			padding: 10px;
+			margin: 20px;
+			background: lightpink;
+			text-align: center;
+			
+		}
+
+		.box4{
+			height: 200px;
+			width: 200px;
+			boder: 5px solid red;
+			padding: 10px;
+			margin: 20px;
+			background: red;
+			text-align: center;
+			
+		}
+
+		.box5{
+			height: 200px;
+			width: 200px;
+			boder: 5px solid red;
+			padding: 10px;
+			margin: 20px;
+			background: blue;
+			text-align: center;
+			
+		}
+
+		.box6{
+			height: 100px;
+			width: 100px;
+			boder: 5px solid red;
+			padding: 25px;
+			margin: 25px;
+			background: green;
+			text-align: center;
+			
+		}
+
+		.box7{
+			height: 100px;
+			width: 100px;
+			boder: 5px solid red;
+			padding: 25px;
+			margin: 25px;
+			background: green;
+			text-align: center;
+			
+		}
+	</style>
+</head>
+<body>
+
+	<div class="box" id="box"></div>
+	<br>
+	<div id="box1"></div>
+	<br>
+	<button onclick="btn()">HTML事件</button>
+	<button id="btn0">DOM 0级事件</button>
+	<button id="btn2d">DOM 2级事件</button>
+	<br>
+	<button id="btn1">click</button>
+	<br>
+	<button id="btn2">dblclick</button>
+	<br>
+	<button id="btn3">mousedown</button>
+	<br>
+	<button id="btn4">mouseup</button>
+	<br>
+	<div class="box1" id="btn5">mousemove</div>
+	<br>
+	<div class="box2" id="btn6">mouseenter</div>
+	<br>
+	<div class="box3" id="btn7">mouseleave</div>
+	<br>
+	<div class="box4" id="btn8"><div class="box6">进入触发，进入子节点触发</div>进入触发，进入子节点触发</div>
+	<br>
+	<div class="box5" id="btn9"><div class="box7">离开触发，离开子节点触发</div></div>
+	<br>
+	<button id="btn10">点击10</button>
+	<br>
+	<div class="box6" id="root">
+		<div class="box7" id="boxa">
+		</div></div>
+		<br >
+	<a href="https://www.w3cschool.cn/javascript/js-libraries.html" id="a">点击不跳转</a>
+	<br>
+	<input type="text" id="key">
+	<input type="text" id="password">
+	<input type="text" id="username">
+	<input type="text" id="aa">
+	<br>
+	<form action="#" id="myForm" onsubmit="submitHandle()">
+		<input type="text">
+		<button id="resetBtn">重置</button>
+		<button>提交</button>
+	</form>
+	<br>
+	<ul id="list">
+		<li>列表1</li>
+		<li>列表2</li>
+	</ul>
+
+
+	<script>
+		var box = document.getElementById('box');
+		console.log(box.clientWidth);
+		console.log(box.clientHeight);
+
+		//css操作
+
+		var box1 = document.getElementById("box1");
+
+			box1.setAttribute("style", "width: 250px; height: 250px; background: red; float: right;");
+
+			// box1.style.width = "300px";
+			// box1.style.height = "300px";
+			// box1.style.background = "red";
+
+			//box1.style.cssText = "border: 2px; width: 200px; height: 200px; background: red;";
+
+
+			//htnml DOM0级事件 DOM2级事件
+
+			// HTML 事件
+			function btn() {
+				alert("HTML事件");
+			}
+
+
+			//DOM 0级事件 
+			 var btn0 = document.getElementById("btn0");
+			 btn0.onclick = function (){
+			 	alert("DOM 0级事件");
+			 }
+
+
+			 // DOM2级事件
+
+			 var btn2d = document.getElementById("btn2d");
+			 btn2d.addEventListener("click",function() {
+			 	alert("DOM2级事件");
+			 });
+
+
+			 // 鼠标事件
+
+			 var btn1 = document.getElementById("btn1");
+			 btn1.onclick = function() {
+			 	alert("按下触发");
+			 }
+
+
+			 var btn2 = document.getElementById("btn2");
+			 btn2.ondblclick = function() {
+			 	alert("双击触发");
+			 }
+
+
+			 var btn3 = document.getElementById("btn3");
+			 btn3.onmousedown = function() {
+			 	alert("按下触发");
+			 }
+
+
+			 var btn4 = document.getElementById("btn4");
+			 btn4.onmouseup = function() {
+			 	alert("释放触发");
+			 }
+
+
+			 var btn5 = document.getElementById("btn5");
+			 btn5.onmousemove = function() {
+			 	alert("移动触发");
+			 }
+
+
+			 var btn6 = document.getElementById("btn6");
+			 btn6.onmouseenter = function() {
+			 	alert("进入触发");
+			 }
+
+
+			 var btn7 = document.getElementById("btn7");
+			 btn7.onmouseleave = function() {
+			 	alert("离开触发");
+			 }
+
+
+
+			 var btn8 = document.getElementById("btn8");
+			 btn8.onmouseover = function() {
+			 	alert("进入触发，进入子节点触发");
+			 }
+
+
+			 var btn9 = document.getElementById("btn9");
+			 btn9.onmouseout = function() {
+			 	alert("离开触发，离开子节点触发");
+			 }
+	// event事件
+
+	var btn10 = document.getElementById("btn10");
+	btn10.onclick = function(event) {
+		alert(event.target);
+		console.log(event.target)//<button id="btn10">
+		event.target.innerHTML = "点击之后";//修改获取目标
+		alert(event.type);//click
+
+	} 		
+
+	var root = document.getElementById("root");
+	var boxa = document.getElementById("boxa");
+
+	root.onclick = function() {
+		alert("root");
+	}
+
+	boxa.onclick = function(e) {
+		e.stopPropagation();//阻止冒泡
+		alert("boxa");
+	}
+
+	var a = document.getElementById("a")
+	a.onclick = function(e) {
+		e.preventDefault();//阻止默认事件
+		alert("点击a标签,不会跳转");
+	}
+
+
+	//键盘事件由用户极大键盘触发，主要有 
+	// keydown:按下键盘触发			数字和字母有值
+	// keypress:按下有值的键触发，即Ctrl、Shift、Meta这样无值键事件不会触发
+	// 对于有值的键，先触发keydown，在触发这个事件
+	// keyup:松开触发 三个事件
+	var key = document.getElementById("key");
+	key.onkeydown = function(e){//按下键盘触发 
+		alert(e.target.value);//e.target获取输入框 value 获取内容
+	}
+
+	//keyCode:代表没个按键的唯一标识 回车：13
+	var password = document.getElementById("password");
+	password.onkeyup = function(e) {
+		alert(e.keyCode);
+		if(e.keyCode === 13){
+			alert("执行");
+		}
+	}
+
+	// 表单事件是在使用表单元素及输入框元素可以监听的一系列事件
+	// input select Change reset submit
+
+	var username = document.getElementById("username");
+	username.oninput = function(e) {
+		alert(e.target.value);//读取数据
+	}
+	username.onselect = function() {
+		alert("选中")
+	}
+
+	//失去焦点或回车触发
+	var aa = document.getElementById("aa");
+	aa.onchange = function(e) {
+		alert(e.target.value)
+	}
+
+
+	// reset submit这两个事件发生在表单对象<form>上，而不是发生在表单成员上
+	// reset 当表单重置时触发
+	// submit 当表单数据向服务器提交时触发对像是<form>
+
+	var resetBtn = document.getElementById("resetBtn");
+	var myForm = document.getElementById("myForm");
+	resetBtn.onclick = function() {
+		myForm.reset();//触发在表单上：清空表单
+	}
+	function submitHandle() {
+		alert("1111")
+	}
+	// 事件代理（事件委托）由于事件会在冒泡阶段向上传播到父节点，因此可以把子节点的监听函数放在父节点-
+	var list = document.getElementById("list");
+	list.addEventListener("click",function(e) {
+		if(event.target.tagName.toLowerCase() === "li"){
+			alert("22");
+		}
+	})
+
+	//定时器 
+	//setTimeout 指定在多少毫秒之后执行。他返回一个整数，表示定时器的编号，以后可以用取消这个定时器
+	// 可以又两个参数，第一个参数是将要推迟执行的函数或代码，第二个参数是推迟的毫秒数
+	
+	var timer = setTimeout(function(){
+		alert("12345");
+	},3000);
+	clearTimeout(timer);//计时器取消
+
+	var name = "cheng";
+	var user = {
+		name:"hong",
+		getName:function() {
+			//this永远指向当前调用者
+			var that = this;
+			setTimeout(function() {
+			console.log(this.name);//cheng
+			console.log(that.name);//hong
+			},3000)
+		}
+	}
+	// alert(user.getName());
+	console.log(user.getName());
+	</script>
+</body>
+</html>
