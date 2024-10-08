@@ -5,25 +5,26 @@
 // 3.执行n-1轮，就可以完成排序
 
 // 定义一个原生的bubbleSort方法
-function mpSort() {
-Array.prototype.bubbleSort = function () {
-	for (let i = 0; i < this.length - 1;i += 1) {
-		//通过 this.length 次把第一为放到最后，完成排序
-		//-i是因为最后的位置是会动态改变的，当完成最后一次，最后一位会变成倒数第二位
-		for (let j = 0; j < this.length -1 - i; j += 1) {
-			if (this[j] > this[j+1]) {
-				const temp = this[j];
-				this[j] = this[j+1];
-				this[j+1] = temp;
-			}
-		}
-	}
-}
-const arr = [4,8,1,43,53,22,11,0] ;
-arr.bubbleSort();
-console.log(arr);
-document.getElementById("demo1").innerHTML = arr;
-}
+// function mpSort() {
+// Array.prototype.bubbleSort = function () {//prototype 原型
+// 	for (let i = 0; i < this.length - 1;i +=1) {
+// 		//通过 this.length 次把第一为放到最后，完成排序
+// 		//-i是因为最后的位置是会动态改变的，当完成最后一次，最后一位会变成倒数第二位
+// 		for (let j = 0; j < this.length -1 - i; j += 1) {
+// 			if (this[j] > this[j+1]) {
+// 				const temp = this[j];//temp 临时
+// 				console.log(this[j]);
+// 				this[j] = this[j+1];
+// 				this[j+1] = temp;
+// 			}
+// 		}
+// 	}
+// }
+// const arr = [4,8,1,43,53,22,11,0] ;
+// arr.bubbleSort();
+// console.log(arr);
+// document.getElementById("demo1").innerHTML = arr;
+// }
 
 // 2.选择排序
 // 说明：

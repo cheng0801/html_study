@@ -693,7 +693,7 @@ continue;
 //对象是一组“键值对（key-value）”的集合，是一种无序的复合数据集合
 
     if (h != 2 ) {
-        document.write("<br>" + "-------------");
+        document.write("<br>" + "-------------<br>");
     }
 
 var add = (function () {
@@ -703,7 +703,7 @@ var add = (function () {
             age : "20",
             flag:true,
             Name:function () {
-                //document.write("红");
+                document.write("红11");
                 return("红");
             },
             Array:["html","css","javascript",{
@@ -782,7 +782,6 @@ var content = document.createTextNode("我是文本")
 var text = document.createElement("p");
 text.appendChild(content);
 text.setAttributeNode(a);
-
 console.log(text);
 document.write();
 
