@@ -6,7 +6,7 @@
     const checkedNames = ref([])
     const picked = ref('One')
     const selected1 = ref()
-    const selected = ref()
+    const selected = ref([])
     const selected3 = ref()
     const toggle = ref()
 
@@ -49,8 +49,8 @@
     <input type="radio" id="two" value="Two" v-model="picked" />
     <label for="two">Two</label>
     <br>
-    <div>Selected: {{ selected1 }}</div>
-    <select v-model="selected1">
+    <div>Selected: {{ selected }}</div>
+    <select v-model="selected">
     <option disabled value="">Please select one</option>
     <option>A</option>
     <option>B</option>
@@ -78,6 +78,6 @@
     <!-- `selected` 在第一项被选中时为字符串 "abc" -->
     <select v-model="selected1">
     <option value="abc">ABC</option>
-    <div>{{ selected1 }}</div>
+    {{ selected1 }}
     </select>
 </template>

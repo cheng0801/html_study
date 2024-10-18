@@ -25,41 +25,9 @@
 		{
 			$("#btn").click(function ()
 			{
-				$.getJSON("",function (data)
+				$.getJSON("http://192.168.6.195:8080/list",function (data)
 
-				{
-					var data= {
-  "status": 0,
-  "msg": "asd",
-  "data": {
-    "yellow": [],
-    "pink": [],
-    "blue": [],
-    "green": [],
-    "lightyellow": [],
-    "white": [
-      {
-        "id": 28,
-        "name": "秩序魔兽██微变新开",
-        "game_version": "巫妖王之怒",
-        "open_time": "2022-12-09 13:55:33",
-        "net_line": 0,
-        "describe": "急速单刷-人山人海-长久稳定-特色玩法-打金首选",
-        "link": "http://www.5520wow.com/",
-        "mark": 0,
-        "old_mark": 1,
-        "start_time": "2022-12-10 18:06:27",
-        "end_time": "2022-12-30 14:23:33",
-        "total_times": 4,
-        "enable": 1,
-        "change_time": "2024-09-30 15:00:25",
-        "link_name": "微变单刷",
-        "ask_me": "59595111",
-        "star_order": 0
-      }
-    ]
-  }
-}
+				
 					console.log(data);
 
 					for(var key in data){
@@ -99,12 +67,12 @@
 					// }
 					
 					// var str = JSON.stringify(data)
-					var x = "";
+					// var x = "";
 					 
-					for (var i = 0; i < str.length; i++)  {
-						x = str[i] + "<br>";
-						document.getElementById("demo5").innerHTML += x ; 
-					}
+					// for (var i = 0; i < str.length; i++)  {
+					// 	x = str[i] + "<br>";
+					// 	document.getElementById("demo5").innerHTML += x ; 
+					// }
 					
  
 					// for (var item in str){
@@ -125,7 +93,7 @@
 					// 显示处理后的数据
 				})
 			})
-		})
+		
 	</script>
 </head>
 <body>

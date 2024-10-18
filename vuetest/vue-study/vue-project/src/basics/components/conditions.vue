@@ -2,7 +2,7 @@
     import { ref } from 'vue';
     const awesome = ref(true)
     const type = ref("A")//ref('d')=>Not A/B/C
-    
+    const ok = ref('0')
 </script>
 
 <template>

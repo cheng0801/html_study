@@ -5,26 +5,26 @@
 // 3.执行n-1轮，就可以完成排序
 
 // 定义一个原生的bubbleSort方法
-// function mpSort() {
-// Array.prototype.bubbleSort = function () {//prototype 原型
-// 	for (let i = 0; i < this.length - 1;i +=1) {
-// 		//通过 this.length 次把第一为放到最后，完成排序
-// 		//-i是因为最后的位置是会动态改变的，当完成最后一次，最后一位会变成倒数第二位
-// 		for (let j = 0; j < this.length -1 - i; j += 1) {
-// 			if (this[j] > this[j+1]) {
-// 				const temp = this[j];//temp 临时
-// 				console.log(this[j]);
-// 				this[j] = this[j+1];
-// 				this[j+1] = temp;
-// 			}
-// 		}
-// 	}
-// }
-// const arr = [4,8,1,43,53,22,11,0] ;
-// arr.bubbleSort();
-// console.log(arr);
-// document.getElementById("demo1").innerHTML = arr;
-// }
+function mpSort() {
+Array.prototype.bubbleSort = function () {//prototype 原型
+	for (let i = 0; i < this.length - 1;i +=1) {
+		//通过 this.length 次把第一为放到最后，完成排序
+		//-i是因为最后的位置是会动态改变的，当完成最后一次，最后一位会变成倒数第二位
+		for (let j = 0; j < this.length -1 - i; j += 1) {
+			if (this[j] > this[j+1]) {
+				const temp = this[j];//temp 临时
+				console.log(this[j]);
+				this[j] = this[j+1];
+				this[j+1] = temp;
+			}
+		}
+	}
+}
+const arr = [4,8,1,43,53,22,11,0] ;
+arr.bubbleSort();                           
+console.log(arr);
+document.getElementById("demo1").innerHTML = arr;
+}
 
 // 2.选择排序
 // 说明：
@@ -38,11 +38,12 @@ Array.prototype.selectionSort = function () {
 		// 假设最小的值就是当前的下标
 		let indexMin = i;
 		// 遍历剩余长度找到最小下标
-		for (let j = i; j <this.length; ++j) {
+		for (let j = i; j <this.length; ++j) {  
 			if (this[j] < this[indexMin] ) {
 				indexMin = j;
 			}
-		}
+		                           .
+		                          }
 		if (indexMin !== i) {
 			// 交换当前下标i与最小下biao的值，重复this.length次
 			const temp = this[i];
@@ -162,16 +163,3 @@ function ksSort() {
 		arr.quickSort();
 		document.getElementById("demo5").innerHTML = arr;
 	}
-function f1(){
-  let a=1
-  function f2(){
-    let a=2
-    function f3(){
-      console.log(a)
-    }
-    a=21
-    f3()
-  }
-  f2()
-}
-f1()
