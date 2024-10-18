@@ -1,0 +1,17 @@
+<script setup>
+    import { ref } from 'vue'
+
+    const text = ref('')
+
+    function onInput(e) {
+        text.value = e.taget.value 
+    }
+</script>
+
+
+<template>
+    <input :value=" text" @input="onInput" placeholder="Type here">
+    <p>{{ text }}</p>
+    <input v-model="text" placeholdr="Type here">
+    <p>{{ text }}</p>
+</template>
